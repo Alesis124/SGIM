@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SGIM.ControladorModo">
+   <children>
+      <Button layoutX="73.0" layoutY="125.0" mnemonicParsing="false" onAction="#Almacena">
+         <graphic>
+            <ImageView fitHeight="79.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/mapa.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="251.0" layoutY="125.0" mnemonicParsing="false" onAction="#Cofre">
+         <graphic>
+            <ImageView fitHeight="79.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/cofre.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="427.0" layoutY="125.0" mnemonicParsing="false" onAction="#Item">
+         <graphic>
+            <ImageView fitHeight="79.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/manzana.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text layoutX="94.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alamacena" />
+      <Text fx:id="textoCofre" layoutX="286.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cofre" />
+      <Text layoutX="465.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item" />
+   </children>
+</AnchorPane>

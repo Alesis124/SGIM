@@ -1,0 +1,171 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="SGIMDB" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="768e504f-3c37-4989-9b28-4e291b7230c9">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SGIM"/>
+	<dataset name="Calculo_tipo" uuid="0a775891-0e59-47af-9a4e-0ac5b24a9355">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SGIM"/>
+		<query language="SQL"><![CDATA[SELECT tipo, COUNT(*) AS cantidad
+FROM Cofre 
+GROUP BY tipo]]></query>
+		<field name="tipo" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="tipo"/>
+			<property name="com.jaspersoft.studio.field.label" value="tipo"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="Cofre"/>
+		</field>
+		<field name="cantidad" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.name" value="cantidad"/>
+			<property name="com.jaspersoft.studio.field.label" value="cantidad"/>
+		</field>
+	</dataset>
+	<query language="SQL"><![CDATA[SELECT *
+FROM `Cofre`]]></query>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Cofre"/>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.label" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Cofre"/>
+	</field>
+	<field name="capacidad" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="capacidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="capacidad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Cofre"/>
+	</field>
+	<title height="143" splitType="Stretch">
+		<element kind="image" uuid="03c968c3-5f6f-4a0f-b175-9a1cbbe753e3" x="-20" y="-20" width="595" height="163" scaleImage="FillFrame">
+			<expression><![CDATA["https://i.pinimg.com/736x/6e/f3/7d/6ef37d06019f715f44d625256e0b3831.jpg"]]></expression>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+		</element>
+		<element kind="staticText" uuid="70822f3c-07cb-41bc-b338-b1580801f7c2" mode="Opaque" x="91" y="10" width="372" height="81" backcolor="#756565" fontSize="31.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[INFORME DE COFRES]]></text>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="image" uuid="f68bbb84-45fd-48ec-b537-397a6d6fb42d" x="10" y="0" width="79" height="84">
+			<expression><![CDATA["https://static.wikia.nocookie.net/minecraft_gamepedia/images/4/41/Chest.gif/revision/latest/scale-to-width/360?cb=20191219163201"]]></expression>
+		</element>
+		<element kind="image" uuid="402bde24-b1e9-4fcb-af97-3da932d62930" x="466" y="0" width="79" height="84">
+			<expression><![CDATA["https://static.wikia.nocookie.net/minecraft_gamepedia/images/4/41/Chest.gif/revision/latest/scale-to-width/360?cb=20191219163201"]]></expression>
+		</element>
+		<element kind="textField" uuid="0d8f2229-f828-4362-8854-65d4c1a6f7c1" mode="Opaque" x="234" y="91" width="95" height="30" backcolor="#756565" fontSize="14.0" pattern="MMMMM dd, yyyy" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<property name="com.jaspersoft.studio.unit.height" value="px"/>
+	</title>
+	<detail>
+		<band height="141" splitType="Stretch">
+			<element kind="image" uuid="fc283692-7551-4f94-aaa1-98b6b830d7ae" x="-20" y="0" width="595" height="140" scaleImage="FillFrame">
+				<expression><![CDATA["https://i.pinimg.com/564x/c0/0a/56/c00a56d3478f2165584f92c5a143bd4f.jpg"]]></expression>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</element>
+			<element kind="textField" uuid="2cd3a35f-5b78-4ba7-94ce-296e14385b9f" mode="Opaque" x="330" y="30" width="185" height="20" backcolor="#C2C2C2" fontSize="12.0" linkType="None" linkTarget="Self">
+				<expression><![CDATA["Nombre: "+$F{nombre}]]></expression>
+				<box>
+					<topPen lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="75803368-842d-484d-871b-8d0f59f755ab" mode="Opaque" x="329" y="63" width="185" height="20" backcolor="#C2C2C2" fontSize="12.0">
+				<expression><![CDATA["Tipo: "+$F{tipo}]]></expression>
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<box>
+					<topPen lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="f3ba1c40-074f-49b7-a6b6-2ab4394dccf5" mode="Opaque" x="329" y="94" width="185" height="21" backcolor="#C2C2C2" fontSize="12.0">
+				<expression><![CDATA["Capacidad: "+$F{capacidad}]]></expression>
+				<box>
+					<topPen lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="image" uuid="d1601f39-fdd2-4e7d-9e4e-d7dd537c8dc5" x="100" y="31" width="79" height="84">
+				<expression><![CDATA[$F{tipo}.equals("Grande") ? "https://static.wikia.nocookie.net/minecraft_gamepedia/images/e/e1/Large_Chest.gif/revision/latest/scale-to-width/360?cb=20191219163142" :
+($F{tipo}.equals("ender") ? "https://static.wikia.nocookie.net/minecraft_gamepedia/images/d/db/Ender_Chest_JE2_BE2.gif/revision/latest?cb=20230305011915" :
+($F{tipo}.equals("Shulker") ? "https://static.wikia.nocookie.net/minecraft_gamepedia/images/b/be/Shulker_Closed.png/revision/latest/scale-to-width/360?cb=20150801223430" :
+($F{tipo}.equals("Barril") ? "https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/21/Barrel_%28U%29_JE1_BE1.png/revision/latest?cb=20200224220423" :
+"https://static.wikia.nocookie.net/minecraft_gamepedia/images/4/41/Chest.gif/revision/latest/scale-to-width/360?cb=20191219163201")))
+]]></expression>
+			</element>
+			<element kind="frame" uuid="0471f0d8-8dc5-41be-8694-7e1f8d2f281e" mode="Opaque" x="0" y="120" width="555" height="20" backcolor="#BF6362">
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="rgba(0, 0, 0, 0.019607844)"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="frame" uuid="14d9126d-33a5-4512-b813-252f087eff56" mode="Opaque" x="0" y="0" width="555" height="20" backcolor="#BF6362">
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</detail>
+	<pageFooter height="36" splitType="Stretch">
+		<element kind="image" uuid="3805a496-7aed-4a16-8f94-baafd52c9d1d" x="0" y="-1" width="555" height="31" scaleImage="FillFrame">
+			<expression><![CDATA["https://i.pinimg.com/564x/c0/0a/56/c00a56d3478f2165584f92c5a143bd4f.jpg"]]></expression>
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</element>
+		<element kind="textField" uuid="eee713d3-c8b2-4818-a79b-9b6b38657a0b" x="270" y="4" width="100" height="21" evaluationTime="Report" hTextAlign="Left" vTextAlign="Middle">
+			<expression><![CDATA["/"+$V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="4bdea09a-b7de-4d2b-a3ef-fa16ce424d38" x="170" y="2" width="100" height="25" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$V{PAGE_NUMBER}]]></expression>
+		</element>
+		<property name="com.jaspersoft.studio.unit.height" value="px"/>
+	</pageFooter>
+	<summary height="232">
+		<element kind="chart" chartType="pie" uuid="ce905c9c-cae7-4a64-9a80-1407bda4af86" x="61" y="52" width="405" height="180" evaluationTime="Report">
+			<dataset kind="pie">
+				<datasetRun uuid="6acbf413-9ebc-4ee8-bcc7-c42704bb8172" subDataset="Calculo_tipo"/>
+				<series>
+					<keyExpression><![CDATA[$F{tipo}]]></keyExpression>
+					<valueExpression><![CDATA[$F{cantidad}]]></valueExpression>
+					<labelExpression><![CDATA[$F{tipo}]]></labelExpression>
+				</series>
+			</dataset>
+			<plot>
+				<itemLabel/>
+			</plot>
+			<box>
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="1ce03fe1-660f-4e33-9c36-bb64760762bb" x="60" y="22" width="406" height="30" fontSize="19.0" hTextAlign="Center">
+			<text><![CDATA[Grafico de tipos de cofre]]></text>
+		</element>
+	</summary>
+</jasperReport>

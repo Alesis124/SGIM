@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="todo" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="210.0" prefWidth="293.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SGIM.ControladorSeguro">
+   <children>
+      <Text fx:id="texto" strokeType="OUTSIDE" strokeWidth="0.0" text="Si quieres cargar un SGIM nuevo y no has guardado el SGIM actual lo perderas para siempre. ¿Quieres guardarlo?" textAlignment="CENTER" wrappingWidth="272.31640625" />
+      <ImageView fitHeight="98.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/warning.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+         <children>
+            <Button fx:id="btnN" mnemonicParsing="false" onAction="#No" text="No" textFill="#f21a1a" />
+            <Button mnemonicParsing="false" onAction="#Cancelar" text="Cancelar" />
+            <Button fx:id="btnS" mnemonicParsing="false" onAction="#Si" text="Sí" textFill="#33a402" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

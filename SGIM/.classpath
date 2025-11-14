@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path=".gradle/8.10.2/dependencies-accessors/d7f838bb16dc243bdd05bfa8f75ef956f6209f3c/sources"/>
+	<classpathentry kind="src" path="app/src/main/java"/>
+	<classpathentry kind="src" path="app/src/test/java/com/example/SGIM"/>
+	<classpathentry kind="lib" path="app/build/libs/app.jar"/>
+	<classpathentry kind="lib" path="gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="output" path=".gradle/8.10.2/dependencies-accessors/d7f838bb16dc243bdd05bfa8f75ef956f6209f3c/classes"/>
+</classpath>

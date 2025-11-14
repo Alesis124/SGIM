@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="todo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SGIM.ControladorAyuda">
+   <children>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="610.0" spacing="20.0">
+         <children>
+            <ScrollPane prefHeight="464.0" prefWidth="610.0">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="400.0" prefWidth="606.0" spacing="20.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ayuda">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Esto es un sistema gestor de inventario de minecraft (SGIM), el cual se utilizará a intentar organizar los cofres, saber donde los tienes localizados y organizar y saber donde esta cada inventario." wrappingWidth="429.322265625" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="En la parte de cofre tendremos todos los cofres que hemos agregado anteriormente, en el caso de que no tengamos ninguno podemos agregarlo con el botón de crear, pero si es el caso de que tengamos un cofre con el mismo nombre, el mismo tipo y la misma capacidad habrá que seleccionar en el apartado Almacena la posición del que estemos buscando, es decir si tenemos dos con el mismo nombre tipo y capacidad tendremos dos posiciones en el apartado almacena." wrappingWidth="432.244140625" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Una vez hayamos seleccionado el cofre y la posición podemos ver los items que hay dentro de ella y poder gestionarlos a nuestro antojo." wrappingWidth="432.51953125" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cuando queremos editar o eliminar algún objeto (Almacena, cofre o item) tendremos que seleccionarlo en la parte de las casillas de la izquierda." wrappingWidth="431.99609375" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Si guardamos nuestro SGIM guardaremos la información de la base de datos y luego lo podremos cargar de nuevo cuando le demos a cargar. " wrappingWidth="431.107421875" />
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</HBox>

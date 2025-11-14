@@ -1,0 +1,199 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="Items" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9b8d5bd8-d630-446d-bddb-971c6fcb3887">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SGIM"/>
+	<dataset name="Tipos" uuid="32e607aa-e9de-48e0-a23b-c0782ecb5387">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SGIM"/>
+		<parameter name="idCofre" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[$P{idCofre}]]></defaultValueExpression>
+		</parameter>
+		<query language="SQL"><![CDATA[SELECT 
+    i.tipo AS item_tipo,
+    COUNT(i.tipo) AS num_tipos_distintos
+FROM 
+    Almacena a
+INNER JOIN 
+    Item i ON a.id_item = i.id_item
+WHERE 
+    a.id_cofre LIKE $P{idCofre}
+GROUP BY 
+    i.tipo]]></query>
+		<field name="item_tipo" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="tipo"/>
+			<property name="com.jaspersoft.studio.field.label" value="item_tipo"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="Item"/>
+		</field>
+		<field name="num_tipos_distintos" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.name" value="num_tipos_distintos"/>
+			<property name="com.jaspersoft.studio.field.label" value="num_tipos_distintos"/>
+		</field>
+	</dataset>
+	<parameter name="idCofre" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{idCofre}]]></defaultValueExpression>
+	</parameter>
+	<query language="SQL"><![CDATA[SELECT 
+    c.nombre AS cofre_nombre,
+    c.tipo AS cofre_tipo,
+    c.capacidad AS cofre_capacidad,
+    a.durabilidad AS item_durabilidad,
+    i.nombre AS item_nombre,
+    i.tipo AS item_tipo,
+    i.imagen AS item_imagen,
+    a.cantidad AS item_cantidad
+FROM 
+    Almacena a
+INNER JOIN 
+    Cofre c ON a.id_cofre = c.id_cofre
+INNER JOIN 
+    Item i ON a.id_item = i.id_item
+WHERE 
+    c.id_cofre LIKE $P{idCofre}
+ORDER BY 
+    c.id_cofre, i.id_item
+
+]]></query>
+	<field name="cofre_nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="cofre_nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Cofre"/>
+	</field>
+	<field name="cofre_tipo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.label" value="cofre_tipo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Cofre"/>
+	</field>
+	<field name="cofre_capacidad" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="capacidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="cofre_capacidad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Cofre"/>
+	</field>
+	<field name="item_durabilidad" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="durabilidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="item_durabilidad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Almacena"/>
+	</field>
+	<field name="item_nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="item_nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Item"/>
+	</field>
+	<field name="item_tipo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.label" value="item_tipo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Item"/>
+	</field>
+	<field name="item_imagen" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="imagen"/>
+		<property name="com.jaspersoft.studio.field.label" value="item_imagen"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Item"/>
+	</field>
+	<field name="item_cantidad" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="cantidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="item_cantidad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Almacena"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="128" splitType="Stretch">
+		<element kind="frame" uuid="1f588ebc-2977-4b18-b031-003ad8ca0c26" mode="Opaque" x="0" y="120" width="554" height="5" backcolor="#FF0703">
+			<property name="com.jaspersoft.studio.unit.y" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.width" value="px"/>
+		</element>
+		<element kind="image" uuid="fe4bf694-6190-4eae-bbd0-ad0e31e73518" x="390" y="0" width="130" height="119">
+			<expression><![CDATA["https://i.imgur.com/ZoTWdH0.png"]]></expression>
+		</element>
+		<element kind="staticText" uuid="8366a885-1a07-4b9b-b59e-bc86d4e1f959" x="0" y="10" width="339" height="30" fontName="Arial Rounded MT Bold" fontSize="22.0" bold="true" vTextAlign="Middle">
+			<text><![CDATA[INFORME DE COFRES]]></text>
+			<box topPadding="0" leftPadding="10">
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="rgba(0, 0, 0, 0.0)"/>
+				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="ef21761f-6cbf-4a89-acb4-bf7dd4d6de2e" x="0" y="40" width="339" height="30" fontName="Baskerville Old Face" fontSize="15.0" italic="true" bold="false" vTextAlign="Middle">
+			<text><![CDATA[Inventario detallado de los ítems almacenados]]></text>
+			<box leftPadding="10">
+				<topPen lineWidth="1.0" lineStyle="Solid" lineColor="rgba(0, 0, 0, 0.0)"/>
+				<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			</box>
+		</element>
+		<element kind="textField" uuid="6b7c0355-7d22-4b6c-8f81-e00b05db925d" x="0" y="90" width="90" height="30" pattern="dd / MMMMM / yyyy" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</title>
+	<detail>
+		<band height="100" splitType="Stretch">
+			<element kind="textField" uuid="8bf21d66-68e9-4917-a6b1-f7b3f7f192b7" x="230" y="0" width="100" height="20" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{cofre_nombre}]]></expression>
+			</element>
+			<element kind="textField" uuid="f8b16283-38d1-44d9-9303-5df9876e13c6" x="430" y="0" width="100" height="20" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA["Capacidad: "+$F{cofre_capacidad}]]></expression>
+			</element>
+			<element kind="textField" uuid="d4a6654b-0ccb-4fe5-b21f-009fae950ad1" x="60" y="60" width="100" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Bottom">
+				<expression><![CDATA[$F{item_durabilidad} == null ? "Cantidad: "+$F{item_cantidad} : "Durabilidad: "+$F{item_durabilidad}
+]]></expression>
+			</element>
+			<element kind="textField" uuid="3997fd9f-0092-4693-ac1f-7fc508881d0a" x="60" y="30" width="100" height="30" fontSize="12.0" hTextAlign="Center">
+				<expression><![CDATA[$F{item_nombre}]]></expression>
+			</element>
+			<element kind="textField" uuid="c30ea8dc-36b7-464c-9290-9cbffe16d0bf" x="220" y="48" width="100" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA["Tipo: "+$F{item_tipo}]]></expression>
+			</element>
+			<element kind="image" uuid="821c9fc3-a4a2-4797-be6f-f5d56c1ff67a" x="430" y="30" width="50" height="50">
+				<expression><![CDATA[new java.io.ByteArrayInputStream(java.util.Base64.getDecoder().decode($F{item_imagen}.getBytes()))]]></expression>
+			</element>
+			<element kind="textField" uuid="17153010-c4a4-4d25-a9bb-bd6b3bba5714" x="0" y="0" width="100" height="20" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA["Tipo: "+$F{cofre_tipo}]]></expression>
+			</element>
+			<element kind="frame" uuid="0bc5343f-bed3-4cb0-afa3-8c431dd3ec09" mode="Transparent" x="0" y="0" width="554" height="20" backcolor="#FF0703">
+				<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+	<pageFooter height="35" splitType="Stretch">
+		<element kind="image" uuid="b4cb3bb6-96fd-4e79-b694-9c57e3f5fb38" x="132" y="0" width="290" height="34" scaleImage="FillFrame">
+			<expression><![CDATA["https://i.pinimg.com/564x/c0/0a/56/c00a56d3478f2165584f92c5a143bd4f.jpg"]]></expression>
+		</element>
+		<element kind="textField" uuid="2c490488-7612-4f14-b1f2-f3823ac4d306" x="280" y="3" width="100" height="21" evaluationTime="Report" hTextAlign="Left" vTextAlign="Middle">
+			<expression><![CDATA["/"+$V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="16940599-a0d0-40c5-b2f6-1dd1bfe32f1b" x="180" y="1" width="100" height="25" hTextAlign="Right" vTextAlign="Middle">
+			<expression><![CDATA[$V{PAGE_NUMBER}]]></expression>
+		</element>
+	</pageFooter>
+	<summary height="191" splitType="Stretch">
+		<element kind="chart" chartType="pie" uuid="d2a274d4-6878-4564-bd3c-0739b044578b" x="120" y="40" width="305" height="150" evaluationTime="Report" linkTarget="Self">
+			<dataset kind="pie">
+				<datasetRun uuid="f65aaee6-5909-4037-9be1-a90802ef28da" subDataset="Tipos">
+					<parameter name="idCofre">
+						<expression><![CDATA[$P{idCofre}]]></expression>
+					</parameter>
+				</datasetRun>
+				<otherSectionHyperlink linkType="None" linkTarget="Self"/>
+				<series>
+					<keyExpression><![CDATA[$F{item_tipo}]]></keyExpression>
+					<valueExpression><![CDATA[$F{num_tipos_distintos}]]></valueExpression>
+					<labelExpression><![CDATA[$F{item_tipo}]]></labelExpression>
+				</series>
+			</dataset>
+			<plot>
+				<itemLabel/>
+			</plot>
+		</element>
+		<element kind="staticText" uuid="762059bf-af96-44dd-979c-05a2d1c2eb5f" x="120" y="10" width="305" height="30" fontSize="19.0" hTextAlign="Center">
+			<text><![CDATA[Grafico de tipos de items]]></text>
+		</element>
+	</summary>
+</jasperReport>

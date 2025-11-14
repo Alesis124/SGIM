@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SGIM.ControladorInforme">
+   <children>
+      <HBox alignment="CENTER" prefHeight="39.0" prefWidth="600.0" spacing="30.0">
+         <children>
+            <Button fx:id="btnRegresar" mnemonicParsing="false" onAction="#Regresar" text="Regresar" />
+            <ComboBox fx:id="desplegable" prefHeight="25.0" prefWidth="92.0" promptText="Cofre" />
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="116.0" spacing="10.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID Cofre:" />
+                  <ComboBox fx:id="NumIdCofre" prefHeight="25.0" prefWidth="66.0" />
+               </children>
+            </HBox>
+            <CheckBox fx:id="chkNueva" mnemonicParsing="false" text="Ventana nueva" />
+            <Button fx:id="btnCrear" mnemonicParsing="false" onAction="#creacion" text="Crear informe" />
+         </children>
+      </HBox>
+      <VBox fx:id="pagina" prefHeight="365.0" prefWidth="600.0" />
+   </children>
+</VBox>

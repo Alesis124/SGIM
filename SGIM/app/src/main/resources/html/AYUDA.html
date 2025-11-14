@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+            background: url('imagenes/tierra.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: rgb(242, 255, 208);
+            text-align: center;
+        }
+        div {
+            background: url('imagenes/piedra.jpg') repeat;
+            border: 3px solid rgb(68, 34, 34);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: yellow;
+            text-align: center;
+        }
+        h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 22px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h3{
+            color: rgb(255, 255, 159);
+        }
+        img {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            height: auto;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .introduccion {
+            display: flex;
+            align-items: center;
+            border: 0px;
+            box-shadow: none;
+            background: none;
+        }
+        .menor {
+            height: 250px;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        a:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="indice">
+        <h1>Índice</h1>
+        <a href="#introduccion"><i>1. Introducción</i></a><br>
+        <a href="#menu"><i>2. Menú</i></a><br>
+        <a href="#barra-lateral"><i>3. Barra lateral</i></a><br>
+        <a href="#centro"><i>4. Centro</i></a><br>
+        <a href="#agregar-editar-cofre"><i>5. Agregar cofre y editar cofre</i></a><br>
+        <a href="#editar-almacena"><i>6. Editar Almacena</i></a><br>
+        <a href="#agregar-editar-items"><i>7. Agregar y editar items</i></a><br>
+        <a href="#eliminar"><i>8. Eliminar</i></a>
+    </div>
+
+    <div id="introduccion">
+        <div class="introduccion">
+            <img src="imagenes/cofre.png" class="menor">
+            <a href="#indice"><h1>Introducción</h1></a>
+            <img src="imagenes/cofre.png" class="menor">
+        </div>
+        <p>Esto es un sistema gestor de inventario de Minecraft (SGIM), el cual se utilizará para intentar organizar los cofres, saber dónde los tienes localizados y organizar y saber dónde está cada inventario.</p>
+        <p>El desplegable que tenemos arriba a la izquierda nos indica en qué zona de la aplicación estamos, esta tiene tres partes: Cofre, Almacena e Item.</p>
+        <p>Esta aplicación está formada por tres partes: la parte de arriba (menú), la zona izquierda (barra lateral) y la zona central (centro).</p>
+    </div>
+    
+    <div id="menu">
+        <a href="#indice"><h2>Menú</h2></a>
+        <p>En esta zona podremos crear, editar y eliminar items o cofres, 
+            según la zona en la que nos ubiquemos. Editar y eliminar permanecerán 
+            desactivados hasta que seleccionemos uno de los cofres, 
+            localizaciones (Almacena) o items. También tenemos un botón para cargar y 
+            guardar nuestro progreso por si queremos enviárselo a otros amigos y 
+            que lo puedan ver. Tenemos los botones para ampliar o disminuir el tamaño 
+            de las letras en la aplicación. Además, contamos con un botón para realizar 
+            informes y otro para llegar a este apartado de ayuda (se puede llegar también 
+            pulsando la tecla F1).</p>
+        <img src="imagenes/menu.png">
+    </div>
+    
+    <div id="barra-lateral">
+        <a href="#indice"><h2>Barra Lateral</h2></a>
+        <p>Esta barra nos permite ver la zona en la que nos ubicamos en la aplicación 
+            en el desplegable, además de navegar entre los tres modos que hay: Cofre, 
+            Almacena e Item. En este apartado veremos los cofres, localizaciones (Almacena) 
+            o items creados para poder seleccionarlos por si nos hace falta editarlos o 
+            eliminarlos. También podemos poner el cursor encima de ellos y nos muestran 
+            información sobre ellos.</p>
+        <img src="imagenes/lateral.png">
+    </div>
+    
+    <div id="centro">
+        <a href="#indice"><h2>Centro</h2></a>
+        <p>En esta zona tendremos visualmente los cofres, lugares o items creados. 
+            Si nos encontramos en la zona Cofre, veremos todos los tipos de cofre que 
+            hay y al darle a uno de ellos nos mostrará los lugares en los que se encuentran 
+            todos esos tipos de cofre. En caso de que no existan, no aparecerá nada. Si hay 
+            lugares, podemos ver los items que hay en dicho cofre, en los cuales, poniendo 
+            el cursor encima, nos da más información sobre ellos.</p>
+        <img src="imagenes/centro.png">
+    </div>
+    
+    <div id="agregar-editar-cofre">
+        <a href="#indice"><h2>Agregar cofre y editar cofre</h2></a>
+        <h3>Agregar cofre</h3>
+        <p>-Para poder agregar un cofre debemos completar los siguientes campos:</p>
+        <p>-Nombre: Colocar un nombre de entre 1 y 50 caracteres</p>
+        <p>-Tipo: Seleccionar el tipo de cofre que agregaremos</p>
+        <p>-Capacidad: Este indica el espacio del cofre, en este caso solo puede ser entre 1 y 120</p>
+        <p>-X/Y/Z: Estas serian las posiciones de donde se situa un cofre</p>
+        <img src="imagenes/agregar-Cofre-Completo.png">
+        <p>En caso de que no completemos los campos nos saldra un error</p>
+        <img src="imagenes/agregar-Cofre-vacio.png"><br>
+        <img src="imagenes/agregar-Cofre-fallo2.png">
+        <p>Si queremos agregar un cofre en un sitio que ya existe nos suelta otro error distinto</p>
+        <img src="imagenes/agregar-Cofre-fallo1.png">
+        <h3>Editar cofre</h3>
+        <p>Para poder editar un cofre tendremos que seleccionar uno de los cofres que tenemos a la izquierda y se activara el boton de editar al cual le daremos para editar dicho cofre</p>
+        <img src="imagenes/seleccion.png">
+        <img src="imagenes/ditar-Cofre-bien 2025-02-15 151356.png">
+        <p>En caso de que de dejemos un hueco en blanco, daria un error</p>
+        <img src="imagenes/Fallo al editar.png">
+
+    </div>
+    
+    <div id="editar-almacena">
+        <a href="#indice"><h2>Editar Almacena</h2></a>
+        <p>En caso de que querramos editar la posicion de un cofre tendremos que acceder al tipo de cofre, seleccionar la posicion que deseemos editar y se activara el boton de edita para editarlo</p>
+        <img src="imagenes/Editar-almacena.png">
+        <p>En caso de que queramos edita una posicion no podriamo poneer una posicion existente ademas de no poder dejar los huecos en blanco, porque si no daria un fallo</p>
+        <img src="imagenes/editar-Almacena-existe.png"> <br>
+        <img src="imagenes/Editar-Almacena-vacio.png">
+    </div>
+    
+    <div id="agregar-editar-items">
+        <a href="#indice"><h2>Agregar y editar items</h2></a>
+        <h3>Agregar item</h3>
+        <p>Si queremos agregar un item dbemos crear anteriormente un cofre y ubicarnos en la ventana de items, una vez dentro le daremos al boton agregar y deberemos completa los campos</p>
+        <img src="imagenes/agregar-item-vacio.png">
+        <p>Si dejamos los huecos vacios nos slatara un error</p>
+        <img src="imagenes/error-vacio.png">
+        <p>Para ello deberiamos escoger el nombre de item con su tipo correspondiente y en caso de que sea objeto pondremos una cantidad que no supere la capacidad que le quede al cofre, pero tambien debemos fijarnos en el stack porque son las veces que se repita el objeto, en esta opcion estara deshabilitada la opcion de durabilidad ya que no se puede definir una durabilidad a un objeto</p>
+        <img src="imagenes/agregar-bien.png">
+        <p>En caso de que sea una armadura o un pico deberiamos poner un numero de durabilidad nada mas haciendo que se deshabiliten las opciones de cantidad y stack ya que no se puede repetir un tipo de armadura o herramienta</p>
+        <img src="imagenes/agregar-bien-armadura.png">
+        <h3>Editar item</h3>
+        <p>Para poder editar un item deberiamos seleccionar en la barra lateral izquierda la opcion que deseemos editar activandose de esa manera el boton de editar al cual le daremos</p>
+        <img src="imagenes/editar-Item.png">
+        <p>En este caso es igual que añadir item pero no aparece la opcion de stack ya que te estas refiriendo a un hueco en especifico del cofre</p>
+    </div>
+    
+    <div id="eliminar">
+        <a href="#indice"><h2>Eliminar</h2></a>
+        <p>Para poder eliminar un codre, una posicion o un item deberemos seleccionar el objeto que tengamos en la barra lateral de la izquierda que queramos eliminar, de esa manera se activará el boton eliminar al cual le daremos, al darle nos saldrá una ventana emergente como metodo de seguridad pra saber si desea eliminarlo</p>
+        <img src="imagenes/eliminar.png">
+    </div>
+
+</body>
+</html>
